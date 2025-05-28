@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- UTF-8 is CRITICAL -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Source Code Viewer Extension</title>
+    <style>
+        /* General Reset & Body Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background for the page */
+            color: #333; /* Default text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures footer is at the bottom */
+        }
+
+        /* Container for centered content */
+        .container {
+            width: 100%;
+            max-width: 900px; /* Max width for readability */
+            margin: 20px auto; /* Center the container, add top/bottom margin */
+            padding: 20px; /* Padding inside the container */
+            background-color: #ffffff; /* White background for content */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            flex-grow: 1; /* Allows container to expand and push footer down */
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0; /* Separator line */
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            color: #2c3e50; /* Dark blue-gray for main title */
+            margin-top: 0; 
+            margin-bottom: 0.2em;
+        }
+
+        header .last-updated {
+            font-size: 0.9em;
+            color: #7f8c8d; /* Muted color for less emphasis */
+        }
+        
+        /* Section Styling */
+        section {
+            margin-bottom: 30px; /* Space between sections */
+        }
+
+        section h2 {
+            font-size: 1.6em;
+            color: #34495e; /* Slightly lighter blue-gray for section titles */
+            border-bottom: 2px solid #3498db; /* Blue accent line */
+            padding-bottom: 0.3em;
+            margin-top: 0; 
+            margin-bottom: 1em; /* Space below the heading */
+        }
+        
+        /* Paragraph and List Styling */
+        p, ul, ol {
+            margin-bottom: 1em; /* Consistent spacing below paragraphs and lists */
+            text-align: justify; /* Justify text for a block look */
+        }
+
+        ul, ol {
+            padding-left: 20px; /* Standard indentation for lists */
+        }
+
+        li {
+            margin-bottom: 0.5em; /* Spacing between list items */
+        }
+
+        /* Code tag styling for inline code snippets (will apply to other code tags) */
+        code {
+            background-color: #ecf0f1; /* Light gray background for code */
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: "Courier New", Courier, monospace; /* Monospace font */
+            font-size: 0.9em;
+            color: #2c3e50; /* Darker text for code for better readability */
+        }
+
+        /* Emphasis styling for <strong> or <b> and our custom class */
+        strong, b { font-weight: 600; }
+        .highlight-emphasis { 
+            color: #c0392b; /* A distinct red color for emphasis */
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        /* Link Styling */
+        a {
+            color: #3498db; /* Blue color for links */
+            text-decoration: none; /* No underline by default */
+        }
+
+        a:hover, a:focus {
+            text-decoration: underline; /* Underline on hover/focus for accessibility */
+            color: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50; /* Dark background for footer */
+            color: #ecf0f1; /* Light text color for footer */
+            margin-top: auto; /* Pushes footer to the bottom */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            text-align: center; /* Ensure footer p text is centered */
+        }
+        
+        footer a {
+            color: #3498db; /* Link color in footer */
+        }
+        
+        footer a:hover, footer a:focus {
+            color: #5dade2; /* Lighter blue for hover in footer */
+        }
+
+        /* Responsive Design Adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            section h2 { font-size: 1.4em; }
+            .container { padding: 15px; margin-left: 10px; margin-right: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            body { font-size: 15px; }
+            header h1 { font-size: 1.6em; }
+            section h2 { font-size: 1.3em; }
+            .container { padding: 10px; margin-left: 5px; margin-right: 5px;}
+             p, ul, ol { text-align: left; } /* Justify can look odd on small screens */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy for Source Code Viewer Extension</h1>
+            <p class="last-updated">Last Updated: 5/29/2025</p>
+        </header>
+
+        <main>
+            <section id="introduction">
+                <p>This Privacy Policy describes how "Source Code Viewer" (the "Extension") handles information when you use it. Your privacy is important to us, and this policy aims to be transparent about our practices.</p>
+            </section>
+
+            <section id="information-access">
+                <h2>1. Information We Access (Not Collected or Stored Long-Term)</h2>
+                <p>The Extension needs to access certain content from the web pages you visit to fulfill its core function. Specifically, when you activate the Extension on a webpage, it will access:</p>
+                <ul>
+                    <li>The HTML source code of the page.</li>
+                    <li>The URLs of external CSS and JavaScript files linked by the page.</li>
+                    <li>The content of these external CSS and JavaScript files.</li>
+                    <li>The content of inline CSS (using the word 'style' in tags) and JavaScript (using the word 'script' in tags) blocks.</li> {/* MODIFIED LINE - USING THE PROVEN WORKING TEXT */}
+                </ul>
+                <p>This information (collectively, "Website Content") is accessed <span class="highlight-emphasis">ONLY</span> when you explicitly click the Extension icon to inspect the current active page. The Extension does not access any information automatically or in the background without your direct interaction.</p>
+            </section>
+
+            <section id="how-we-use-information">
+                <h2>2. How We Use Accessed Information</h2>
+                <p>The Website Content accessed by the Extension is used <span class="highlight-emphasis">SOLELY</span> for the following purposes:</p>
+                <ul>
+                    <li>To display the HTML, CSS, and JavaScript source code within the Extension's popup interface for your viewing.</li>
+                    <li>To allow you to copy parts of this displayed code to your clipboard.</li>
+                </ul>
+                <p>The Extension <span class="highlight-emphasis">DOES NOT</span>:</p>
+                <ul>
+                    <li>Store this Website Content persistently. It is only held in your computer's memory for the duration of your interaction with the popup on that specific page. Once the popup is closed or you navigate away, this information is discarded from memory.</li>
+                    <li>Transmit this Website Content to any external server or third party. All processing and display occur locally within your browser.</li>
+                    <li>Collect, store, or transmit any Personally Identifiable Information (PII). The Extension is designed to be entirely client-side and does not have the capability to identify or track individual users.</li>
+                    <li>Track your browsing history or user activity beyond the immediate interaction of fetching and displaying code for the active page when requested by you.</li>
+                </ul>
+            </section>
+
+            <section id="permissions">
+                <h2>3. Permissions</h2>
+                <p>The Extension requires the following permissions in Google Chrome (and similar Chromium-based browsers) for the reasons stated:</p>
+                <ul>
+                    <li>
+                        <strong><code>activeTab</code></strong>: This permission allows the Extension to identify the current page you wish to inspect when you click the extension icon. It grants temporary access to the active tab only upon your explicit interaction (clicking the extension icon) and does not provide general access to your tabs or browsing history.
+                    </li>
+                    <li>
+                        <strong><code>scripting</code></strong>: This permission is necessary to inject a content script into the active page. This script is responsible for reading the page's source code (HTML) and identifying linked resources (CSS, JavaScript) so they can be fetched and displayed.
+                    </li>
+                    <li>
+                        <strong><code>host_permissions</code> (<all_urls>)</strong>: This permission is required to allow the injected script to fetch the content of external CSS and JavaScript files from any domain. Web pages often link to resources hosted on various Content Delivery Networks (CDNs) or different servers than the main page itself. Without this permission, the Extension would be unable to retrieve and display these essential parts of the source code. This permission is used <span class="highlight-emphasis">ONLY</span> when you activate the extension to fetch these resources for display and not for any other purpose.
+                    </li>
+                </ul>
+                <p>We are committed to requesting only the minimum permissions necessary for the Extension to function as described.</p>
+            </section>
+
+            <section id="data-security">
+                <h2>4. Data Security</h2>
+                <p>Since no user data or website content is stored persistently by the Extension or transmitted externally to any servers, the security of your information primarily relies on the security measures of your own browser and computer system. The Extension operates entirely within the sandboxed environment provided by your browser.</p>
+                <p>We encourage you to keep your browser and operating system updated to benefit from the latest security patches and protections.</p>
+            </section>
+
+            <section id="policy-changes">
+                <h2>5. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. Minor changes or clarifications may be made without a formal announcement other than updating the date.</p>
+                <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+            </section>
+
+            <section id="contact-us">
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions, concerns, or suggestions about this Privacy Policy or the Extension's practices, please feel free to contact us. You can reach out via:</p>
+                <ul>
+                    <li>Email: <a href="mailto:gokuthug1@example.com">gokuthug833@gmail.com</a></li>
+                    <li>GitHub Issues: <a href="YOUR_GITHUB_ISSUES_PAGE_URL_HERE" target="_blank" rel="noopener noreferrer">Project GitHub Issues Page</a> (Please replace with your actual GitHub issues link)</li>
+                </ul>
+                <p>We value your feedback and are committed to addressing any concerns you may have.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Source Code Viewer Extension. All rights reserved.</p>
+        <p>This Privacy Policy is for the Source Code Viewer browser extension.</p>
+    </footer>
+
+    <script>
+        // This script dynamically sets the current year in the footer.
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
