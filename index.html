@@ -149,7 +149,7 @@
     <div class="container">
         <header>
             <h1>Privacy Policy for Source Code Viewer Extension</h1>
-            <p class="last-updated">Last Updated: 5/29/2025</p>
+            <p class="last-updated" id="updateDate">Last Updated: May 24, 2024</p>
         </header>
 
         <main>
@@ -164,21 +164,22 @@
                     <li>The HTML source code of the page.</li>
                     <li>The URLs of external CSS and JavaScript files linked by the page.</li>
                     <li>The content of these external CSS and JavaScript files.</li>
-                    <li>The content of inline CSS (using the word 'style' in tags) and JavaScript (using the word 'script' in tags) blocks.</li>
+                    <li>The content of inline CSS (inside <code>&lt;style&gt;</code> tags) and JavaScript (inside <code>&lt;script&gt;</code> tags) blocks.</li>
                 </ul>
                 <p>This information (collectively, "Website Content") is accessed <span class="highlight-emphasis">ONLY</span> when you explicitly click the Extension icon to inspect the current active page. The Extension does not access any information automatically or in the background without your direct interaction.</p>
             </section>
 
             <section id="how-we-use-information">
                 <h2>2. How We Use Accessed Information</h2>
-                <p>The Website Content accessed by the Extension is used <span class="highlight-emphasis">SOLELY</span> for the following purposes:</p>
+                <p>The Website Content accessed by the Extension is used <span class="highlight-emphasis">SOLELY</span> for the following purposes, all of which occur locally on your computer:</p>
                 <ul>
                     <li>To display the HTML, CSS, and JavaScript source code within the Extension's popup interface for your viewing.</li>
                     <li>To allow you to copy parts of this displayed code to your clipboard.</li>
+                    <li>To package the collected HTML, CSS, and JavaScript files into a <code>.zip</code> archive for you to download to your local machine.</li>
                 </ul>
                 <p>The Extension <span class="highlight-emphasis">DOES NOT</span>:</p>
                 <ul>
-                    <li>Store this Website Content persistently. It is only held in your computer's memory for the duration of your interaction with the popup on that specific page. Once the popup is closed or you navigate away, this information is discarded from memory.</li>
+                    <li>Store this Website Content persistently. It is only held in your computer's memory for the duration of your interaction with the popup on that specific page. Once the popup is closed or you navigate away, this information is discarded.</li>
                     <li>Transmit this Website Content to any external server or third party. All processing and display occur locally within your browser.</li>
                     <li>Collect, store, or transmit any Personally Identifiable Information (PII). The Extension is designed to be entirely client-side and does not have the capability to identify or track individual users.</li>
                     <li>Track your browsing history or user activity beyond the immediate interaction of fetching and displaying code for the active page when requested by you.</li>
@@ -190,13 +191,13 @@
                 <p>The Extension requires the following permissions in Google Chrome (and similar Chromium-based browsers) for the reasons stated:</p>
                 <ul>
                     <li>
-                        <strong><code>activeTab</code></strong>: This permission allows the Extension to identify the current page you wish to inspect when you click the extension icon. It grants temporary access to the active tab only upon your explicit interaction (clicking the extension icon) and does not provide general access to your tabs or browsing history.
+                        <strong><code>activeTab</code></strong>: This permission allows the Extension to run on the current page when you click the extension icon. It grants temporary access to the active tab only upon your explicit interaction and does not provide general access to your tabs or browsing history.
                     </li>
                     <li>
                         <strong><code>scripting</code></strong>: This permission is necessary to inject a content script into the active page. This script is responsible for reading the page's source code (HTML) and identifying linked resources (CSS, JavaScript) so they can be fetched and displayed.
                     </li>
                     <li>
-                        <strong><code>host_permissions</code> (<all_urls>)</strong>: This permission is required to allow the injected script to fetch the content of external CSS and JavaScript files from any domain. Web pages often link to resources hosted on various Content Delivery Networks (CDNs) or different servers than the main page itself. Without this permission, the Extension would be unable to retrieve and display these essential parts of the source code. This permission is used <span class="highlight-emphasis">ONLY</span> when you activate the extension to fetch these resources for display and not for any other purpose.
+                        <strong><code>host_permissions</code> (&lt;all_urls&gt;)</strong>: This permission is required to allow the injected script to fetch the content of external CSS and JavaScript files from any domain. Web pages often link to resources hosted on various Content Delivery Networks (CDNs) or different servers. Without this permission, the Extension would be unable to retrieve and display these essential parts of the source code. This broad permission also allows the extension to function on locally opened files (<code>file://...</code>) and special browser pages like <code>about:blank</code>. This permission is used <span class="highlight-emphasis">ONLY</span> when you activate the extension to fetch resources for display and not for any other purpose.
                     </li>
                 </ul>
                 <p>We are committed to requesting only the minimum permissions necessary for the Extension to function as described.</p>
@@ -204,19 +205,19 @@
 
             <section id="data-security">
                 <h2>4. Data Security</h2>
-                <p>Since no user data or website content is stored persistently by the Extension or transmitted externally to any servers, the security of your information primarily relies on the security measures of your own browser and computer system. The Extension operates entirely within the sandboxed environment provided by your browser.</p>
+                <p>Since no user data or website content is stored persistently by the Extension or transmitted externally, the security of your information relies on the security measures of your own browser and computer system. The Extension operates entirely within the sandboxed environment provided by your browser.</p>
                 <p>We encourage you to keep your browser and operating system updated to benefit from the latest security patches and protections.</p>
             </section>
 
             <section id="policy-changes">
                 <h2>5. Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. Minor changes or clarifications may be made without a formal announcement other than updating the date.</p>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. Minor changes or clarifications may be made without a formal announcement other than updating the date.</p>
                 <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
             </section>
 
             <section id="contact-us">
                 <h2>6. Contact Us</h2>
-                <p>If you have any questions, concerns, or suggestions about this Privacy Policy or the Extension's practices, please feel free to contact us. You can reach out via:</p>
+                <p>If you have any questions or concerns about this Privacy Policy, please feel free to contact us via:</p>
                 <ul>
                     <li>Email: <a href="mailto:gokuthug833@gmail.com">gokuthug833@gmail.com</a></li>
                     <li>GitHub Issues: <a href="https://github.com/gokuthug1/policy/issues/1" target="_blank" rel="noopener noreferrer">Project GitHub Issues Page</a></li>
@@ -232,12 +233,21 @@
     </footer>
 
     <script>
-        // This script dynamically sets the current year in the footer.
+        // This script dynamically sets the current year and last updated date.
         document.addEventListener('DOMContentLoaded', function() {
             const currentYearSpan = document.getElementById('currentYear');
             if (currentYearSpan) {
                 currentYearSpan.textContent = new Date().getFullYear();
             }
+            
+            // Optional: Also auto-update the "Last Updated" date if you want it to be dynamic on every page load
+            // For a static policy, it's better to set the date manually in the HTML.
+            // const updateDateSpan = document.getElementById('updateDate');
+            // if (updateDateSpan) {
+            //     const today = new Date();
+            //     const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            //     updateDateSpan.textContent = 'Last Updated: ' + today.toLocaleDateString('en-US', options);
+            // }
         });
     </script>
 </body>
