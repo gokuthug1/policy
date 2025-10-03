@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8"> <!-- UTF-8 is CRITICAL -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Source Code Viewer Extension</title>
@@ -149,7 +147,7 @@
     <div class="container">
         <header>
             <h1>Privacy Policy for Source Code Viewer Extension</h1>
-            <p class="last-updated" id="updateDate">Last Updated: August | 8/22/2025</p>
+            <p class="last-updated" id="updateDate">Last Updated: October 3, 2025</p>
         </header>
 
         <main>
@@ -186,8 +184,18 @@
                 </ul>
             </section>
 
+            <section id="user-settings">
+                <h2>3. User Settings and Preferences</h2>
+                <p>To provide a personalized experience, the Extension allows you to customize its appearance. We use the <code>chrome.storage.sync</code> API to save your theme preferences.</p>
+                <ul>
+                    <li>This data consists only of your chosen theme name (e.g., "Dark", "Light") and any custom color codes you have set in the settings.</li>
+                    <li>This information is considered non-personal configuration data. It is not linked to your identity and is used solely to remember your preferred look and feel for the extension.</li>
+                    <li>Using <code>chrome.storage.sync</code> allows your settings to be synchronized across different computers where you are logged into your Google account.</li>
+                </ul>
+            </section>
+
             <section id="permissions">
-                <h2>3. Permissions</h2>
+                <h2>4. Permissions</h2>
                 <p>The Extension requires the following permissions in Google Chrome (and similar Chromium-based browsers) for the reasons stated:</p>
                 <ul>
                     <li>
@@ -197,26 +205,29 @@
                         <strong><code>scripting</code></strong>: This permission is necessary to inject a content script into the active page. This script is responsible for reading the page's source code (HTML) and identifying linked resources (CSS, JavaScript) so they can be fetched and displayed.
                     </li>
                     <li>
-                        <strong><code>host_permissions</code> (&lt;all_urls&gt;)</strong>: This permission is required to allow the injected script to fetch the content of external CSS and JavaScript files from any domain. Web pages often link to resources hosted on various Content Delivery Networks (CDNs) or different servers. Without this permission, the Extension would be unable to retrieve and display these essential parts of the source code. This broad permission also allows the extension to function on locally opened files (<code>file://...</code>) and special browser pages like <code>about:blank</code>. This permission is used <span class="highlight-emphasis">ONLY</span> when you activate the extension to fetch resources for display and not for any other purpose.
+                        <strong><code>storage</code></strong>: This permission is required to save your theme preferences using the <code>chrome.storage.sync</code> API. This allows the Extension to remember your chosen theme (Dark, Light, or Custom) between sessions and across your devices. No personal data is stored using this permission.
+                    </li>
+                    <li>
+                        <strong><code>host_permissions</code> (&lt;all_urls&gt;)</strong>: This permission is required to allow the injected script to fetch the content of external CSS and JavaScript files from any domain. Web pages often link to resources hosted on various Content Delivery Networks (CDNs) or different servers. Without this permission, the Extension would be unable to retrieve and display these essential parts of the source code. This permission is used <span class="highlight-emphasis">ONLY</span> when you activate the extension to fetch resources for display and not for any other purpose.
                     </li>
                 </ul>
                 <p>We are committed to requesting only the minimum permissions necessary for the Extension to function as described.</p>
             </section>
 
             <section id="data-security">
-                <h2>4. Data Security</h2>
+                <h2>5. Data Security</h2>
                 <p>Since no user data or website content is stored persistently by the Extension or transmitted externally, the security of your information relies on the security measures of your own browser and computer system. The Extension operates entirely within the sandboxed environment provided by your browser.</p>
                 <p>We encourage you to keep your browser and operating system updated to benefit from the latest security patches and protections.</p>
             </section>
 
             <section id="policy-changes">
-                <h2>5. Changes to This Privacy Policy</h2>
+                <h2>6. Changes to This Privacy Policy</h2>
                 <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. Minor changes or clarifications may be made without a formal announcement other than updating the date.</p>
                 <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
             </section>
 
             <section id="contact-us">
-                <h2>6. Contact Us</h2>
+                <h2>7. Contact Us</h2>
                 <p>If you have any questions or concerns about this Privacy Policy, please feel free to contact us via:</p>
                 <ul>
                     <li>Email: <a href="mailto:gokuthug833@gmail.com">gokuthug833@gmail.com</a></li>
@@ -228,29 +239,19 @@
     </div>
 
     <footer>
-        <p>© <span id="currentYear"></span> Source Code Viewer Extension. All rights reserved.</p>
+        <p>© <span id="currentYear">2025</span> Source Code Viewer Extension. All rights reserved.</p>
         <p>This Privacy Policy is for the Source Code Viewer browser extension.</p>
     </footer>
 
     <script>
-        // This script dynamically sets the current year and last updated date.
+        // This script dynamically sets the current year.
         document.addEventListener('DOMContentLoaded', function() {
             const currentYearSpan = document.getElementById('currentYear');
             if (currentYearSpan) {
                 currentYearSpan.textContent = new Date().getFullYear();
             }
-            
-            // Optional: Also auto-update the "Last Updated" date if you want it to be dynamic on every page load
-            // For a static policy, it's better to set the date manually in the HTML.
-            // const updateDateSpan = document.getElementById('updateDate');
-            // if (updateDateSpan) {
-            //     const today = new Date();
-            //     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            //     updateDateSpan.textContent = 'Last Updated: ' + today.toLocaleDateString('en-US', options);
-            // }
         });
     </script>
+
 </body>
 </html>
-
-
